@@ -1,7 +1,4 @@
-# This workflow will build a .NET project
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
-
-name: Math Utility .Net CI
+name: Math Utility .NET CI
 
 on:
   push:
@@ -14,30 +11,34 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    env:
+      BUILD_OUTPUT_PATH: C:\Users\84868\Downloads\MathUtil\Com.VanQuoc.MathUtil.Core\bin\Debug\net8.0
+
     steps:
     - uses: actions/checkout@v4
+
     - name: Setup .NET
       uses: actions/setup-dotnet@v4
       with:
-        dotnet-version: 8.0.x
-        
+        dotnet-version: '8.0.x' # Thay đổi phiên bản .NET theo nhu cầu của bạn
+
     - name: Restore dependencies
       run: dotnet restore
-      
+
     - name: Build
-      run: dotnet build --no-restore
-      
+      run: dotnet build --configuration Debug --no-restore
+
     - name: Test
       run: dotnet test --no-build --verbosity normal
-      
+
     - name: Collect build outputs
       run: |
         mkdir -p output
-        cp Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0/*.exe output/
-        cp Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0/*.dll output/
+        cp "${BUILD_OUTPUT_PATH}/*.exe" output/
+        cp "${BUILD_OUTPUT_PATH}/*.dll" output/
 
     - name: Upload build outputs
       uses: actions/upload-artifact@v2
       with:
         name: build-outputs
-        path: output  
+        path: output
