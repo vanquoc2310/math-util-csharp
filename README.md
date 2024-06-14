@@ -2,7 +2,7 @@
 
 ## In this repository, you will find the following:
 
-* A C# Project showcasing a comprehensive Math library for various mathematical operations
+* A C# Project showcasing a comprehensive Math library 
 * Unit Test scripts using the xUnit Test framework and TDD, DDT techniques
 * A CI script to demonstrate Continuous Integration using GitHub Actions with .NET
 * A demonstration on how to handle code conflicts and merge code in a teamwork environment
@@ -10,7 +10,7 @@
 * And more...
 
 ## Screenshots
-![Source code and test script](https://github.com/vanquoc2310/math-util/blob/main/screenshots/SourceCodeAndUnitTest.png)
+![Source code and test script](https://github.com/vanquoc2310/math-util-csharp/blob/main/screenshots/SourceCodeAndUnitTest.png)
 
 ### Connect with me via: namhuy041@gmail.com
 
