@@ -32,7 +32,6 @@ jobs:
       run: |
             mkdir -p output
             ls Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0  # In ra danh sách file trong thư mục để debug
-            cp Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0/Com.VanQuoc.MathUtil.Core.exe output/
             cp Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0/Com.VanQuoc.MathUtil.Core.dll output/
 
     - name: Upload build outputs
