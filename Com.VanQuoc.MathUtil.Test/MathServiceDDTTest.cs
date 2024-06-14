@@ -20,17 +20,16 @@ namespace Com.VanQuoc.MathUtil.Test
         {
             return new TheoryData<int, int, int>
         {
-            { 54, 24, 6 },  // GCD of 54 and 24 is 6
-            { 30, 15, 15 }, // GCD of 30 and 15 is 15
-            { 48, 18, 6 },  // GCD of 48 and 18 is 6
-            // Thêm các bộ tham số khác tại đây
+            { 54, 24, 6 },  
+            { 30, 15, 15 }, 
+            { 48, 18, 6 },  
         };
         }
 
         // Phương thức kiểm thử tham số hóa
         [Theory]
         [MemberData(nameof(InitData))]
-        public void TestGCD(int a, int b, int expectedGCD)
+        public void TestGCD_ValidInput_ReturnsExpectedResult(int a, int b, int expectedGCD)
         {
             var mathService = new MathService();
 
