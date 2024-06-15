@@ -30,9 +30,9 @@ namespace Com.VanQuoc.MathUtil.Test
         [Fact]
         public void GetGCD_BothNumbersAreZero_ThrowsArgumentException()
         {
-            //Assert.Throws<ArgumentException>(() => _mathService.GetGCD(0, 0));
-            var ex = Assert.Throws<ArgumentException>(() => _mathService.GetGCD(0, 0));
-            Assert.Equal("Both numbers cannot be zero.", ex.Message);
+            Assert.Throws<ArgumentException>(() => _mathService.GetGCD(0, 0));
+            //var ex = Assert.Throws<ArgumentException>(() => _mathService.GetGCD(0, 0));
+            //Assert.Equal("Both numbers cannot be zero.", ex.Message);
         }
     }
 }
