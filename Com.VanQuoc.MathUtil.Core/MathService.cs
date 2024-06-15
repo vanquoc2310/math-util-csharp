@@ -8,8 +8,15 @@ namespace Com.VanQuoc.MathUtil.Core
 {
     public class MathService
     {
+
         public int GetGCD(int a, int b)
         {
+
+            if (a == 0 && b == 0)
+            {
+                throw new ArgumentException("Both numbers cannot be zero.");
+            }
+
             if (a == 0) return Math.Abs(b);
             if (b == 0) return Math.Abs(a);
 
