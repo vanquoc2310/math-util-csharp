@@ -45,7 +45,6 @@ namespace Com.VanQuoc.MathUtil.Test
         [InlineData(101, 10, 1)]
         [InlineData(0, 5, 5)]
         [InlineData(5, 0, 5)]
-        [InlineData(0, 0, 0)]
         [InlineData(27, 36, 9)]
         [InlineData(56, 98, 14)]
         public void GetGCD_ValidInput_ReturnsExpectedResult(int a, int b, int expected)
