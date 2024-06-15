@@ -1,3 +1,5 @@
+[![Math Utility .NET CI](https://github.com/vanquoc2310/math-util-csharp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/vanquoc2310/math-util-csharp/actions/workflows/dotnet.yml)
+
 # Welcome to Math Utility Repository
 
 ## In this repository, you will find the following:
