@@ -1,3 +1,5 @@
+[![Math Utility .NET CI](https://github.com/vanquoc2310/math-util-csharp/actions/workflows/dotnet.yml/badge.svg)](https://github.com/vanquoc2310/math-util-csharp/actions/workflows/dotnet.yml)
+
 # Welcome to Math Utility Repository
 
 ## In this repository, you will find the following:
@@ -6,7 +8,6 @@
 * Unit Test scripts using the xUnit Test framework and TDD, DDT techniques
 * A CI script to demonstrate Continuous Integration using GitHub Actions with .NET
 * A demonstration on how to handle code conflicts and merge code in a teamwork environment
-* A demonstration on what Regression Testing (Kiểm thử hồi quy) is
 * And more...
 
 ## Screenshots

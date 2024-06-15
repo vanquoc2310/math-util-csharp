@@ -1,0 +1,41 @@
+name: Math Utility .NET CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x' # Thay đổi phiên bản .NET theo nhu cầu của bạn
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Debug --no-restore
+
+    - name: Test
+      run: dotnet test --no-build --verbosity normal
+
+    - name: Collect build outputs
+      run: |
+            mkdir -p output
+            ls Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0  # In ra danh sách file trong thư mục để debug
+            cp Com.VanQuoc.MathUtil.Core/bin/Debug/net8.0/Com.VanQuoc.MathUtil.Core.dll output/
+
+    - name: Upload build outputs
+      uses: actions/upload-artifact@v2
+      with:
+        name: build-outputs
+        path: output
