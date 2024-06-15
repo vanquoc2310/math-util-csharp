@@ -16,10 +16,7 @@ namespace Com.VanQuoc.MathUtil.Test
         [Fact]
         public void GetGCD_NegativeInput_ReturnsPositiveGCD()
         {
-            // Act
             int result = _mathService.GetGCD(-54, 24);
-
-            // Assert
             Assert.Equal(6, result);
         }
     }

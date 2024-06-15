@@ -8,7 +8,6 @@ namespace Com.VanQuoc.MathUtil.Core
 {
     public class MathService
     {
-        // Hàm tính ước chung lớn nhất của hai số nguyên
         public int GetGCD(int a, int b)
         {
             if (a == 0) return Math.Abs(b);
